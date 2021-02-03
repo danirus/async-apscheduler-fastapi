@@ -1,0 +1,8 @@
+aiofiles
+apscheduler
+fastapi
+ipdb
+ipython
+pydantic
+python-multipart
+uvicorn
