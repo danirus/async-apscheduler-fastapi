@@ -22,9 +22,9 @@ def main(series: int):
     if not os.path.exists(config.INBOX_PATH):
         os.mkdir(config.INBOX_PATH)
     for i in range(0, 9):
-        filename = f"file_%02d_{i}.zip" % series
+        filename = f"file_%02d_{i}.csv" % series
         copyfile(SEED_FILE_PATH, config.INBOX_PATH / filename)
-    print(f"Created files from file_%02d_0.zip to file_%02d_9.zip." % (
+    print(f"Created files from file_%02d_0.csv to file_%02d_9.csv." % (
         series, series ))
 
 if __name__ == "__main__":

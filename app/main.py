@@ -65,7 +65,6 @@ class SchedulerService:
         logger.info("I'm checking the inbox dir for files to process.")
         for filename in os.listdir(config.INBOX_PATH):
             await asyncio.sleep(2)
-            # logger.info(f"Found file {filename}")
             logger.info(f"Queueing {filename}.")
             self.queue.put_nowait(filename)
         logger.info("I checked all the files in the inbox directory.")
