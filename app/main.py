@@ -78,7 +78,10 @@ class SchedulerService:
 
         # Cancel our worker tasks.
         for task in tasks:
+            # I have to cancel them because they stand waiting
+            # for more elements in the queue with queue.get()
             task.cancel()
+
         # Wait until all worker tasks are cancelled.
         await asyncio.gather(*tasks, return_exceptions=True)
 

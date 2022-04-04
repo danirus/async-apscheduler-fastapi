@@ -21,6 +21,8 @@ more than one process looking for files in the input directory, which would
 lead to a race condition. However the file processing uses the pseudo-
 parallelism offered by asyncio, which gives fast copy ratios.
 
+This example is using FastAPI to show how to add batch processing tasks with APScheduler to an already existing API implemented with FastAPI. But it can be implemented without it: [async-apschedule](https://github.com/danirus/async-apscheduler).
+
 ## See it in action
 
 Create a virtualenv, enable it and `pip install -r requirements.txt`.
